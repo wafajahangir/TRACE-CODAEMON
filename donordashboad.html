@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donor Dashboard | Trace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-logo"><img src="navlogo.png"></div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="donor-dashboard.html" class="active">Dashboard</a>
+  </div>
+  <div class="nav-actions">
+    <a href="#" class="login-btn">Logout</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
+
+<main class="container">
+
+<h1>Donor Dashboard</h1>
+
+<section class="stats">
+  <div class="stat-card"><span>Total Donated</span><div class="value">₹0</div></div>
+  <div class="stat-card"><span>NGOs Supported</span><div class="value">0</div></div>
+</section>
+
+<div class="tabs">
+  <button class="tab active" data-tab="overview">Overview</button>
+  <button class="tab" data-tab="donations">My Donations</button>
+  <button class="tab" data-tab="browse">Browse NGOs</button>
+</div>
+
+<section class="tab-content active" id="overview">
+  <div class="card">Recent donations appear here.</div>
+</section>
+
+<section class="tab-content" id="donations">
+  <div class="card">Donation history table.</div>
+</section>
+
+<section class="tab-content" id="browse">
+  <div class="ngo-grid">
+    <div class="ngo-card">
+      <h4>Helping Hands</h4>
+      <p>Education • Rural • India</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/donordash.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NGO Dashboard | Trace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <div class="nav-logo">
+    <img src="navlogo.png" alt="Trace">
+  </div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="ngo-dashboard.html" class="active">NGO Dashboard</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="#" class="login-btn">Logout</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="container">
+  <h1>NGO Dashboard</h1>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat-card"><span>Total Donations</span><div class="value">₹0</div></div>
+    <div class="stat-card"><span>Merit Points</span><div class="value">0</div></div>
+    <div class="stat-card"><span>Rank</span><div class="value">—</div></div>
+  </section>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" data-tab="overview">Overview</button>
+    <button class="tab" data-tab="donations">Donations</button>
+    <button class="tab" data-tab="proof">Proof of Work</button>
+  </div>
+
+  <!-- TAB CONTENT -->
+  <section class="tab-content active" id="overview">
+    <div class="card">
+      <h3>Growth Overview</h3>
+      <canvas id="growthChart" height="120"></canvas>
+    </div>
+  </section>
+
+  <section class="tab-content" id="donations">
+    <div class="card">
+      Donations list coming soon
+    </div>
+  </section>
+
+  <section class="tab-content" id="proof">
+    <button class="login-btn" id="openProofModal">Post Proof</button>
+    <div id="proofList"></div>
+  </section>
+</main>
+
+<!-- PROOF MODAL -->
+<div class="modal" id="proofModal">
+  <div class="modal-content">
+    <h3>Post Proof</h3>
+    <input id="proofTitle" placeholder="Project Title">
+    <textarea id="proofDesc" placeholder="Description"></textarea>
+    <input type="file">
+    <button class="login-btn" id="submitProof">Submit</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="ngodash.js"></script>
+</body>
+</html>
